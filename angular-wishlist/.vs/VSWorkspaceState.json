@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\destino-viaje",
+    "\\src\\app\\form-destino-viaje",
+    "\\src\\app\\lista-destinos",
+    "\\src\\app\\models",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\destino-viaje\\destino-viaje.component.ts",
+  "PreviewInSolutionExplorer": false
+}

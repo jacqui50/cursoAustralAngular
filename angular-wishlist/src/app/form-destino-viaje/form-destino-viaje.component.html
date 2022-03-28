@@ -1,0 +1,29 @@
+<!--<p>form-destino-viaje works!</p>-->
+<!-- Lo que quitamos de lista-destinos...html -->
+<form
+      [formGroup]="fg"
+      (ngSugmit)="guardar(fg.controls['nombre'].value, fg.controls['url'].value)"
+      >
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" placeholder="Ingresar nombre..."
+           [formControl]="fg.controls['nombre']">
+    <ul>
+      <li *ngFor="let r of searchResults;">{{r}}</li>
+    </ul>
+    <div *ngIf="!fg.controls['nombre'.valid]">Nombre inválido</div>
+    <div *ngIf="fg.controls['nombre'.hasError('required')]">Nombre requerido</div>
+    <div *ngIf="fg.controls['nombre'.hasError('invalidNombre')]">No me gusta tu nombre</div>
+    <div *ngIf="fg.controls['nombre'.hasError('minLongNombe')]">Nombre necesita al menos {{minLongitud}} caracteres.</div>
+  </div>
+  <div class="form-group">
+    <label for="Imagen	Url">Imagen	Url</label>
+    <input type="text" class="form-control" id="imagenUrl" placeholder="Ingresar	url..."
+            [formControl]="fg.controls['url']"
+           >
+  </div>
+  <button type="submit" class="btn	btn-primary"
+          *ngIf="fg.valid"
+          >Guardar!</button>
+</form>
+

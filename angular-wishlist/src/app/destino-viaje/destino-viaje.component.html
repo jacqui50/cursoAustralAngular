@@ -1,21 +1,43 @@
 <!--<p>destino-viaje works!</p>-->
-
 <!--<p>{{nombre}}</p>-->
-
 <!-- pegamos código regalado en el curso -->
-
 <!--<div	class="col-md-4">-->
-	<div	class="card-content">
-		<div	class="card-img">
-			<img	src="https://placeimg.com/380/230/nature"	alt="">
-			<span><h4>{{destino.nombre}}</h4></span>
-		</div>
-		<div	class="card-desc">
-			<h3>{{destino.nombre}}</h3>
-			<p>Lorem	ipsum	dolor	sit	amet	consectetur,	adipisicing	elit.	Laboriosam,	voluptatum!	Dolor	
-quo,	perspiciatis
-															voluptas	totam</p>
-			<a	href="#"	class="btn-card">Read</a>			
-		</div>
-	</div>
+<div class="card-content">
+  <div class="card-img">
+    <img src="https://placeimg.com/380/230/nature" alt="">
+    <span><h4>{{posicion}}</h4></span>
+  </div>
+  <div class="card-desc">
+    <h3>{{destino.nombre}}</h3>
+    <!--<p>
+    Lorem	ipsum	dolor	sit	amet	consectetur,	adipisicing	elit.	Laboriosam,	voluptatum!	Dolor
+    quo,	perspiciatis
+    voluptas	totam
+  </p>-->
+    <p>Atractivos:</p>
+    <ul>
+      <li *ngFor="let s of destino.atractivos">
+        <!--<span>{{s}}</span>-->
+        <span [ngSwitch]="s">
+          <i *ngSwitchCase="'playa'" style="color: red;">{{s}}</i>
+          <i *ngSwitchDefault>{{s}}</i>
+        </span>
+      </li>
+    </ul>
+
+    <div>
+      <a href="#" (click)="voteUp()"><i class="material-icons md-18">thumb_up</i></a>
+      <a href="#" (click)="voteDown()"><i class="material-icons md-18">thumb_down</i></a>
+      {{destino.votes}}
+    </div>
+
+    <a href="#" class="btn-card" (click)="ir()">Consultar</a>
+    <!--<span [style.display]="destino.isSelected()?'':'none'">PREFERIDO</span>-->
+    <span *ngIf="destino.isSelected()">
+      <!---PREFERIDO--->
+      <span ngNonBindable>{{PREFERIDO}}</span>
+    </span>
+    <a [routerLink]="['/destino']">Ver Detalle</a>
+  </div>
+</div>
 <!--</div>-->

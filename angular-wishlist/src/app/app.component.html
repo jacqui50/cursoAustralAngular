@@ -1,7 +1,27 @@
 
 <div class="container content">
+
+	<div class="page-header">
+		<div class="container">
+			<h1>Ruteo Simple</h1>
+			<div class="navLinks">
+				<a [routerLink]="['/home']">Home</a>
+				<a [routerLink]="['/destino']">Destino</a>
+			</div>
+		</div>
+	</div>
+
 	<div class="row"><h1>{{title}}</h1></div>
 	<!--<app-destino-viaje></app-destino-viaje>-->
-	<app-lista-destinos></app-lista-destinos>
+
+	<!--<app-lista-destinos></app-lista-destinos>-->
+	<router-outlet></router-outlet>
+
 </div>
+
+<hr class="mb-5" />
+
+Fecha: {{ time | async }}
+<!-- async al primer render y seguir actualizando -->
+
 
