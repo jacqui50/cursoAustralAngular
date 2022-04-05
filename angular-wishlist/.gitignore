@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+node_modules/ # también los anidados, pesan mucho
 
 # profiling files
 chrome-profiler-events*.json

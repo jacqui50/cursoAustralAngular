@@ -3,12 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\destino-viaje",
-    "\\src\\app\\form-destino-viaje",
-    "\\src\\app\\lista-destinos",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\form-destino-viaje",
+    "\\src\\app\\components\\lista-destinos",
     "\\src\\app\\models",
-    "\\src\\assets"
+    "\\src\\app\\reservas",
+    "\\src\\app\\reservas\\reservas-listado",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\destino-viaje\\destino-viaje.component.ts",
+  "SelectedNode": "\\src\\app\\models\\destinos-api-client.model.ts",
   "PreviewInSolutionExplorer": false
 }
