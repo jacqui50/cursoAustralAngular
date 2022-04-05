@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\form-destino-viaje",
-    "\\src\\app\\components\\lista-destinos",
-    "\\src\\app\\models",
+    "\\src\\app\\components\\vuelos",
+    "\\src\\app\\components\\vuelos\\vuelos-main-component",
+    "\\src\\app\\components\\vuelos\\vuelos-mas-info-component",
     "\\src\\app\\reservas",
     "\\src\\app\\reservas\\reservas-listado",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\models\\destinos-api-client.model.ts",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
