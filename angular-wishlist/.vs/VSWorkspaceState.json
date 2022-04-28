@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\cypress\\integration",
+    "\\cypress\\integration\\1-getting-started",
+    "\\cypress\\integration\\2-advanced-examples",
+    "\\e2e",
+    "\\e2e\\src",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\vuelos",
-    "\\src\\app\\components\\vuelos\\vuelos-main-component",
-    "\\src\\app\\components\\vuelos\\vuelos-mas-info-component",
-    "\\src\\app\\reservas",
-    "\\src\\app\\reservas\\reservas-listado",
     "\\src\\app\\services"
   ],
   "SelectedNode": "\\src\\app\\app.module.ts",

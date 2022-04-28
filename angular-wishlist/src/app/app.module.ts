@@ -36,6 +36,12 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 import { from } from 'rxjs';
 import { flatMap } from 'rxjs/operators';
 
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EspiameDirective } from './espiame.directive';
+import { TrackearClickDirective } from './trackear-click.directive';
+
 // dexie db
 export class Translation {
   constructor(public id: number, public lang: string, public key: string, public value: string) { }
@@ -185,13 +191,17 @@ const reducersInitialState = {
     FormDestinoViajeComponent,
     NgRxStoreModule,
     LoginComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    EspiameDirective,
+    TrackearClickDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    NgxMapboxGLModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(rutas),
     NgRxStoreModule.forRoot(reducers, { initialState: reducersInitialState }),
     EffectsModule.forRoot([DestinosViajesEffects]),
